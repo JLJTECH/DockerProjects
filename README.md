@@ -1,6 +1,8 @@
 # DockerProjects
 Collection of Docker related projects
 
+##Show running containers
+```docker ps```
 
 ##Stop all running Containers:
 ```docker stop $(docker ps -a -q)```
