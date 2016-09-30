@@ -1,0 +1,27 @@
+#Existing WP Directory
+
+apache:
+  build: ./resources/apache # Inside resources/apache, there is a Dockerfile
+  ports:
+    - "8080:80" # Map port 8080 to port 80 on Apache
+  links:
+    - mysql # Link MySQL
+  volumes:
+    - ./wordpress:/var/www/html # Our wordpress folder will be mounted as /var/www/html
+
+mysql:
+  build: ./resources/mysql # Inside resources/mysql, there is a Dockerfile
+  volumes:
+    - ./resources/mysql:/docker-entrypoint-initdb.d # Mount resources/mysql into docker-entrypoint-init.d. Any SQL files inside of resources/mysql will be imported into Docker MySQL automatically
+  environment:
+    MYSQL_DATABASE: wordpress # Database wordpress
+    MYSQL_ROOT_PASSWORD: root # Database password root
+
+phpmyadmin:
+  image: corbinu/docker-phpmyadmin # phpMyAdmin image
+  ports:
+    - "8081:80" # Map prot 8081 to port 80
+  links:
+    - mysql # Link MySQL
+  environment:
+    MYSQL_USERNAME: root # MySQL username is root
