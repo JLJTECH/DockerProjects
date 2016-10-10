@@ -12,3 +12,9 @@ Collection of Docker related projects
 
 ##Remove all Images:
 ```docker rmi $(docker images -q)```
+
+##Build from Docker File using Compose (file dir):
+```docker-compose build```
+
+##Run from Docker File:
+```docker-compose up -d``` 
