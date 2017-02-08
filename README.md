@@ -4,20 +4,20 @@ Collection of Docker related projects
 ##Show running containers
 ```docker ps```
 
-##Stop all running Containers:
+##Stop all running containers:
 ```docker stop $(docker ps -a -q)```
 
-##Remove all Containers:
+##Remove all containers:
 ```docker rm $(docker ps -a -q)```
 
-##Remove all Images:
+##Remove all images:
 ```docker rmi $(docker images -q)```
 
-##Build from Docker File using Compose (file dir):
+##Build from Docker file using compose (file dir):
 ```docker-compose build```
 
-##Run from Docker File:
+##Run from Docker file:
 ```docker-compose up -d``` 
 
-##Locate Volumes on the host
+##Locate volumes on the host
 ```docker inspect web```
