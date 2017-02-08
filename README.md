@@ -18,3 +18,6 @@ Collection of Docker related projects
 
 ##Run from Docker File:
 ```docker-compose up -d``` 
+
+##Locate Volumes on the host
+```docker inspect web```
