@@ -1,5 +1,5 @@
-# DockerProjects
-Collection of Docker related projects
+# DockerProjects and Shortcuts
+Collection of Docker related items
 
 ##Show running containers
 ```docker ps```
