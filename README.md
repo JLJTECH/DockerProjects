@@ -21,3 +21,6 @@ Collection of Docker related items
 
 ## Locate volumes on the host
 ```docker inspect web```
+
+## Add restart policy to running container
+```docker update --restart=always <container>```
