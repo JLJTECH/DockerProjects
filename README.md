@@ -24,3 +24,6 @@ Collection of Docker related items
 
 ## Add restart policy to running container
 ```docker update --restart=always <container>```
+
+## Connect to SQL instance in container
+```docker exec -it [container_name] mysql -u[user] -p[password]```
