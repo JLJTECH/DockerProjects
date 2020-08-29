@@ -1,6 +1,9 @@
 # DockerProjects and Shortcuts
 Collection of Docker related items
 
+## Show image and container stats
+```docker system df```
+
 ## Show running containers
 ```docker ps```
 
@@ -12,6 +15,10 @@ Collection of Docker related items
 
 ## Remove all images:
 ```docker rmi $(docker images -q)```
+
+## CLEAN IT ALL
+```docker system prune -a --volumes```
+> **-a** will remove all unused images and **--volumes** will cleanup all unused volumes
 
 ## Build from Docker file using compose (file dir):
 ```docker-compose build```
